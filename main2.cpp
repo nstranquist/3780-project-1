@@ -22,11 +22,8 @@ int main() {
   int *dynamic_array = new int[10];
 
   // Output results
-  cout << "Local static array: " << &local_static_array << endl;
-  cout << "Dynamic array: " << &dynamic_array << endl;
-
-
-
+  cout << "Local static array: " << &local_static_array << endl; // 0x7ffdf768ee40
+  cout << "Dynamic array: " << &dynamic_array << endl; // 0x7ffdf768ee38
 
   return 0;
 }

@@ -1,5 +1,6 @@
 *.o
 .vscode/
+images/
 main
 main2
 main3

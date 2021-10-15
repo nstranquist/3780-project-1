@@ -16,15 +16,16 @@ string getFirstCharWithCat(string s);
 string getLastCharWithDog(string s);
 
 int main() {
-  cout << "Hello pt 1!" << endl;
-
   string s = "Hello";
+
+  cout << "Welcome! This program takes a starting word and applies a few adjustments to it.\nIt will then show you the end result.\n" << endl;
+  cout << "Starting word: " << s << endl;
 
   // 1. Call getFirstCharWithCat to kick it off
   string result = getFirstCharWithCat(s);
 
   // 2. Output result
-  cout << "Result: " << result << endl;
+  cout << "End Result: " << result << endl;
 
   return 0;
 }

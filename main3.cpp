@@ -44,8 +44,11 @@ int main() {
 
     // 1. Check for overflow
     if(willOverflowAddition(num1, num2)) {
-      throw "Overflow";
+      cout << "Error: " << num1 << " + " << num2 << " will overflow integer addition! Stop." << endl;
+      return 1;
     }
+
+    cout << "" << endl;
 
     // 2. Safely add the numbers
     int sum = num1 + num2;
@@ -55,7 +58,8 @@ int main() {
 
     // 1. Check for overflow
     if(willOverflowMultiplication(num1, num2)) {
-      throw "Overflow";
+      cout << "Error: " << num1 << " * " << num2 << " will overflow integer multiplication! Stop." << endl;
+      return 1;
     }
 
     // 2. Safely multiply the numbers
@@ -66,7 +70,8 @@ int main() {
     
     // 1. Check for overflow
     if(willOverflowDivision(num1, num2)) {
-      throw "Overflow";
+      cout << "Error: " << num1 << " / " << num2 << " will overflow integer division! Stop." << endl;
+      return 1;
     }
     
     // 2. Safely divide the numbers

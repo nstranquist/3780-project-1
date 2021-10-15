@@ -14,7 +14,18 @@ using namespace std;
 
 int main() {
   cout << "Hello pt 2!" << endl;
-  
+
+  // Local static array
+  int local_static_array[10];
+
+  // Dynamic array
+  int *dynamic_array = new int[10];
+
+  // Output results
+  cout << "Local static array: " << &local_static_array << endl;
+  cout << "Dynamic array: " << &dynamic_array << endl;
+
+
 
 
   return 0;

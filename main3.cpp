@@ -72,10 +72,6 @@ int main() {
     // 2. Safely divide the numbers
     int quotient = num1 / num2;
     cout << "The quotient of " << num1 << " and " << num2 << " is " << quotient << endl;
-
-    // Divide the second number by the first
-    int quotient2 = num2 / num1;
-    cout << "The quotient of " << num2 << " and " << num1 << " is " << quotient2 << endl;
   }
   catch (exception e) {
     // for debugging

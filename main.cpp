@@ -12,7 +12,7 @@ using namespace std;
  */
 
 int main() {
-  cout << "Hello pt 2!" << endl;
+  cout << "Hello pt 1!" << endl;
 
 
   return 0;

@@ -1,7 +1,8 @@
 // Task 2
 
 #include <stdio.h>
-#include <string.h>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -12,7 +13,8 @@ using namespace std;
  */
 
 int main() {
-
+  cout << "Hello pt 2!" << endl;
+  
 
 
   return 0;

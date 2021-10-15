@@ -28,8 +28,8 @@ bool willOverflowDivision(int a, int b);
 int main() {
   cout << "Hello pt 3!" << endl;
 
-  int maxIntPos = 2147483647;
-  int maxIntNeg = -2147483648;
+  // int maxIntPos = 2147483647;
+  // int maxIntNeg = -2147483648;
 
   try {
     // Prompt user for two numbers (can assume will only be integers)
@@ -40,43 +40,64 @@ int main() {
     int num2;
     cin >> num2;
 
+    cout << "" << endl;
+
     // Add the two numbers
 
     // 1. Check for overflow
     if(willOverflowAddition(num1, num2)) {
-      cout << "Error: " << num1 << " + " << num2 << " will overflow integer addition! Stop." << endl;
-      return 1;
+      cout << "Warning: " << num1 << " + " << num2 << " will overflow integer addition!" << endl;
+
+      int sum = num1 + num2;
+
+      cout << "Here is the addition overflow result: " << sum << "\n" << endl;
+
+      // return 1;
     }
-
-    cout << "" << endl;
-
-    // 2. Safely add the numbers
-    int sum = num1 + num2;
-    cout << "The sum of " << num1 << " and " << num2 << " is " << sum << endl;
+    else {
+      // 2. Safely add the numbers
+      int sum = num1 + num2;
+      cout << "The sum of " << num1 << " and " << num2 << " is " << sum << "\n" << endl;
+    }
 
     // Multiply the two numbers
 
     // 1. Check for overflow
     if(willOverflowMultiplication(num1, num2)) {
-      cout << "Error: " << num1 << " * " << num2 << " will overflow integer multiplication! Stop." << endl;
-      return 1;
-    }
+      cout << "Warning: " << num1 << " * " << num2 << " will overflow integer multiplication!" << endl;
 
-    // 2. Safely multiply the numbers
-    int product = num1 * num2;
-    cout << "The product of " << num1 << " and " << num2 << " is " << product << endl;
+      int product = num1 * num2;
+      cout << "Here is the multiplication overflow result: " << product << "\n" << endl;
+
+      // return 1;
+    }
+    else {
+      // 2. Safely multiply the numbers
+      int product = num1 * num2;
+      cout << "The product of " << num1 << " and " << num2 << " is " << product << "\n" << endl;
+    }
 
     // Divide the first number by the second
     
     // 1. Check for overflow
     if(willOverflowDivision(num1, num2)) {
-      cout << "Error: " << num1 << " / " << num2 << " will overflow integer division! Stop." << endl;
-      return 1;
+      cout << "Warning: " << num1 << " / " << num2 << " will overflow integer division!" << endl;
+
+      if(num2 == 0) {
+        cout << "Cannot divide by 0. Skipping the division overflow." << endl;
+      }
+      else {
+        int quotient = num1 / num2;
+        cout << "Here is the division overflow result: " << quotient << "\n" << endl;
+      }
+
+      // return 1;
     }
-    
-    // 2. Safely divide the numbers
-    int quotient = num1 / num2;
-    cout << "The quotient of " << num1 << " and " << num2 << " is " << quotient << endl;
+    else {
+      // 2. Safely divide the numbers
+      int quotient = num1 / num2;
+      cout << "The quotient of " << num1 << " and " << num2 << " is " << quotient << endl;
+    }
   }
   catch (exception e) {
     // for debugging

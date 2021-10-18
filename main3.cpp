@@ -117,6 +117,15 @@ bool willOverflowAddition(int a, int b) {
   return false;
 }
 
+bool willOverflowSubtraction(int a, int b) {
+  if ((b > 0) && (a < numeric_limits<int>::min() + b))
+    return true;
+  if ((b < 0) && (a > numeric_limits<int>::max() + b))
+    return true;
+
+  return false;
+}
+
 bool willOverflowMultiplication(int a, int b) {
   if ((a > 0 && b > 0) && (a > numeric_limits<int>::max() / b))
     return true;

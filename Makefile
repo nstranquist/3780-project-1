@@ -1,5 +1,5 @@
 main: main.cpp
-	g++ -Wall -g -o main main.cpp
+	g++ -Wall -g -std=c++0x -o main main.cpp
 
 main2: main2.cpp
 	g++ -Wall -g -o main2 main2.cpp
